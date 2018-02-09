@@ -20,7 +20,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
 
         imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary // or .camera
+        imagePicker.sourceType = .camera // or .photoLibrary
         imagePicker.allowsEditing = false
         
     }
