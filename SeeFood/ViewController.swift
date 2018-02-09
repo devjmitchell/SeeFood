@@ -55,7 +55,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 fatalError("Model failed to process image.")
             }
             
-            print(results)
+            if let firstResult = results.first {
+                if firstResult.identifier.contains("hotdog") {
+                    self.navigationItem.title = "Hotdog!"
+                    self.navigationController?.navigationBar.barTintColor = UIColor.green
+                    self.view.backgroundColor = UIColor.green
+                } else {
+                    self.navigationItem.title = "Not Hotdog!"
+                    self.navigationController?.navigationBar.barTintColor = UIColor.red
+                    self.view.backgroundColor = UIColor.red
+                }
+            }
             
         }
         
